@@ -433,7 +433,7 @@ p {
 .imagebackground_3 {
     position: relative;
     height: 100vh;
-    background-image: url('images/cala\ figuera.jpg');
+    background-image: url('Images/cala\ figuera.jpg');
     background-position: center center;
     background-size: cover;
     display: flex;
@@ -507,7 +507,7 @@ p {
 .imagebackground_2 {
     position: relative;
     height: 100vh;
-    background-image: url('images/ZZZZZZZZZZZZZZZZZZZZZ.jpg');
+    background-image: url('Images/ZZZZZZZZZZZZZZZZZZZZZ.jpg');
     background-position: center center;
     background-size: cover;
     display: flex;
@@ -536,7 +536,7 @@ p {
     position: relative;
     height: 450px;
     object-fit: cover; 
-    background-image: url('images/2.MLF_23_05_19_BlackEyePeas_JavierBragado_.jpg');
+    background-image: url('Images/2.MLF_23_05_19_BlackEyePeas_JavierBragado_.jpg');
     background-position: center center;
     background-size: cover;
     display: flex;
