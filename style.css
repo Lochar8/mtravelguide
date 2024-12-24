@@ -1,0 +1,781 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for Colors and Fonts */
+:root {
+
+    /* Colors */
+
+    --primary-color: #212121; 
+    --accent-color: #FFC400FF;  
+    --text-color: #333;      
+    --overlay-color: rgba(0, 0, 0, 0.8);
+    --white: #fff;           
+    --light-grey: #555;      
+    
+    /* Fonts */
+
+    --body-font: 'Poppins', sans-serif; 
+    --heading-font: 'Playfair Display', serif; 
+}
+
+/* Body Text and Title Font */
+
+html, body {
+    height: 100%;
+    font-family: var(--body-font);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-top: 0; 
+}
+
+/* Equal spacing for all Titles*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+}
+
+/* Equal spacing for all Paragraphs*/
+
+p {
+    margin-top: 10px;
+}
+
+/* Titles (Headings) */
+
+.heading1, .heading2, .heading3, .specialheading {
+    font-family: var(--heading-font);
+}
+
+/* Heading Styles */
+
+.heading1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--accent-color);
+}
+
+.heading2 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.heading3 {
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.specialheading {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--accent-color);
+}
+
+/* Navbar Styles */
+
+.nav {
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navbar Text */
+
+.nav header {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: var(--heading-font);
+}
+
+/* Navbar */
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 24px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.nav .imageandlogo {
+    display: flex;
+    padding: 10px;
+}
+
+.imageandlogo h3{
+    margin-left: 20px;
+    margin-top: 6px;
+    
+}
+
+/* Section_one Styles (Background Image) */
+
+.section_one {
+    position: relative;
+    height: 100vh;
+    background-image: url('Images/3f9e3_470_14malle.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+/* Overlay Styles */
+
+.overlay {
+    text-align: center;
+    background-color: var(--overlay-color);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+}
+
+.overlay .heading1{
+    color: var(--accent-color);
+    position: relative;
+    margin-top: 40px;
+}
+
+
+/* Section Two Styles */
+
+.section_two {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+    text-align: justify;
+    color: var(--white);
+}
+
+.section_two .heading2 {
+    color: var(--accent-color);
+
+}
+
+/* Flex layout for content in section_two */
+
+.section_two .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Responsive iframe (Google Maps) */
+
+.section_two iframe {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+/* Section_two Paragraph Styles */
+
+.section_two p {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    order: 1;
+}
+
+/* Title_1 Styles */
+
+.title_1 {
+    margin-left: 200px;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+}
+
+/* Card Container Styles */
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+}
+
+/* Card Styles */
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Hover effect for the card */
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Image inside Card */
+
+.card-img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+/* Card Content Styling */
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; 
+    text-align: center;
+}
+
+.card-content p {
+    color: var(--light-grey);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Button */
+
+.card-btn {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-weight: bold;
+    text-align: center; 
+    display: inline-block; 
+}
+
+
+.card-btn a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.card-btn:hover {
+    background-color: var(--primary-color);
+}
+
+
+/* Footer Styles */
+.footer {
+    margin-top: 80px;
+    background-color: var(--accent-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer ul li a {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.footer ul li a:hover {
+    color: var(--white);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.bottom-bit{
+    display: flex;
+    
+}
+.logo {
+    display: flex;
+    margin-left: 640px;
+    margin-top: 40px;
+    
+    
+    
+    
+ 
+   
+}
+
+.logo h3{
+    margin-left: 10px;
+    margin-top: 25px;
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 650px;
+    margin-top: 60px;
+    gap: 20px;
+    
+}
+
+
+
+/* Responsive Design */
+
+/* For screens smaller than 768px (Tablets and Mobile Devices) */
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 15px 10px; 
+    }
+
+    .nav ul li {
+        margin-left: 15px;
+    }
+
+    .section_one {
+        padding: 0 15px;
+    }
+
+    .section_two .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section_two iframe {
+        width: 100%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .section_two p {
+        width: 100%;
+        order: 2;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%; 
+    }
+
+    .footer ul li a {
+        margin-left: 10px; 
+    }
+}
+
+/* For screens smaller than 480px (Mobile devices) */
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; 
+    }
+
+        
+
+    .nav ul li {
+        margin-left: 10px;
+    }
+}
+
+
+
+
+
+
+
+/* VISIT */
+
+/* Background Image */
+
+.imagebackground_3 {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/cala\ figuera.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+
+
+
+/* Section_four Styles */
+.section_four {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+    color: var(--white);
+
+}
+
+.section_four .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Responsive iframe (Youtube Video) */
+
+.section_four iframe {
+    width: 250%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+
+.container_one {
+    display: flex;
+    gap: 20px; 
+    align-items: baseline ;
+}
+
+
+.image_row {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.image_row img {
+    width: 23%; 
+    height: auto; 
+    margin-bottom: 80px;
+}
+
+
+
+
+
+
+/*ACTIVITIES AND EVENTS*/
+
+/* Background Image */
+
+.imagebackground_2 {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/ZZZZZZZZZZZZZZZZZZZZZ.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+/* Title_1 Styles */
+
+.etitle_1 {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 40px;
+}
+
+.etitle_1 .heading1{
+    color: var(--accent-color);
+}
+
+/* Background Image Layer */
+
+.imagelayer_1 {
+    margin-left: 200px;
+    margin-right: 200px;
+    position: relative;
+    height: 450px;
+    object-fit: cover; 
+    background-image: url('images/2.MLF_23_05_19_BlackEyePeas_JavierBragado_.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    margin-bottom: 200px;
+    border-radius: 40px;
+}
+
+/* Overlay_2 Styles + Content */
+
+.overlay_2 {
+    text-align: left;
+    background-color: var(--overlay-color);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 30%;
+    color: var(--white);
+}
+
+    
+.text-btn {
+    text-align: left;
+    display: flex;
+    flex-direction: column; 
+    gap: 75px; 
+}
+
+
+
+.ovl_2 .heading1 {
+    color: var(--accent-color);
+}
+
+.ovl_2 p {
+    color: var(--white);
+   
+}
+
+.overlay_2 .button-container {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 10px; 
+}
+
+
+.ovl-img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+/* Card Content Styling */
+
+.ovl-content {
+    padding: 20px;
+    flex-grow: 1; 
+    text-align: center;
+}
+
+.paragraph {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+    color: var(--white);
+}
+
+/*Background Image*/
+
+.imagebackground_4 {
+    position: relative;
+    height: 100vh;
+    background-image: url('Images/Mallorca-poram-1950.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+
+
+
+
+/* TRAVEL */
+
+/* Background Image */
+
+.sec_one {
+    margin-left: 200px;
+    margin-right: 200px;
+    color: var(--white);
+    margin-bottom: 200px;
+
+}
+
+/*Intro Styles*/
+
+.text_one, .intro{
+    margin-bottom: 80px;
+}
+
+.tib, .text_one .images_one {
+    display: flex;
+    gap: 20px;
+}
+
+.images_one img{
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 80px;
+    height: 300px;
+    width: 600px;
+   
+    
+}
+
+.sec_one, .heading1{
+    margin-bottom: 40px;
+}
+
+
+.emt, .text_one .images_one {
+    display: flex;
+    gap: 20px;
+}
+
+.sec_one p{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+/* NEWS */
+
+/* News Heading (Local) */
+
+.localnews {
+    margin-top: 250px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* News Heading (National) */
+
+.nationalnews {
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/*Weather Widget*/
+
+.weatherwidget {
+    position: fixed;
+    width: 100%;
+    top: 140px;
+}
+
+
+/* Card Container Styles */
+
+.card-container1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+ 
+}
+
+/* Card Styles */
+
+.card1 {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    height: 320px;
+}
+
+
+
+/* Image inside Card */
+
+.card1-img {
+    width: 25%;
+    height: 320px; 
+    object-fit: cover; 
+}
+
+/* Card Content Styling */
+
+.card1-content {
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+.card1-content p {
+    color: var(--light-grey);
+    
+}
+
+.source {
+    display: flex;
+    flex-direction: row;
+    gap: 210px;
+    margin-bottom: 20px;
+}
+
+.card-container2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+ 
+}
+
+.card-container1 .card-container2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.learnmore{
+    margin-top: 50px;
+    margin-left: 300px;
+}
+
