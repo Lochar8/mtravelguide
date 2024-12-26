@@ -14,7 +14,8 @@
     --text-color: #333;      
     --overlay-color: rgba(0, 0, 0, 0.8);
     --white: #fff;           
-    --light-grey: #555;      
+    --light-grey: #555;
+    --button-color: #3c1246;
     
     /* Fonts */
 
@@ -281,7 +282,7 @@ p {
 /* Button */
 
 .card-btn {
-    background-color: var(--accent-color);
+    background-color: var(--button-color);
     color: var(--white);
     border: none;
     padding: 12px 0;
@@ -303,7 +304,8 @@ p {
 }
 
 .card-btn:hover {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
+    color: var(--button-color)
 }
 
 
